@@ -1,6 +1,7 @@
 <script>
    import Header from './UI/Header.svelte';
    import TextInput from './UI/TextInput.svelte';
+   import Button from './UI/Button.svelte';
    import MeetupGrid from './Meetups/MeetupGrid.svelte';
 
    let meetups = [
@@ -74,7 +75,8 @@
       
       <TextInput id="description" controlType="textarea" rows="5" label="Description" value={description} on:input={e => description = e.target.value}/>
 
-      <button type="submit">Submit</button>
+      <!-- <button type="submit">Submit</button> -->
+      <Button type="submit" caption="Submit" />
    </form>
 
    <MeetupGrid {meetups} />
